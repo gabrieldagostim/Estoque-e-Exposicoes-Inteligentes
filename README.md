@@ -90,12 +90,12 @@
 </p>
 
 <h2>Relatório_comercial_agrupado</h2>
-<p>Desenvolvi esse para consulta rápida para eu verificar quando precisa consultar alguma informação e consultar se a etapa de cálculo está correta </p>
+<p>Desenvolvi esse relatório para consulta rápida para verificar quando precisa consultar alguma informação e consultar se a etapa de cálculo está correta </p>
 
 <h2>Pergunta de negócio:</h2>
 <h1>O item mapeado na posição x loja x móvel vai gerar excesso na loja?</h1>
 
-<p>Quanto a de cálculo para responder a pergunta de negócio:
+<p>Quanto ao cálculo para responder a pergunta de negócio:
 </p>
 
 <div style="font-size: 20px;"> 
