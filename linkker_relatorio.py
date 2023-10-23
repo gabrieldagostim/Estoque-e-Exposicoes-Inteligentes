@@ -3,14 +3,13 @@ import pandas as pd
 
 # Importando os dados
 
-# Planilha linkker
+# Planilha onde os produtos são mapeados
 linkker_df = pd.read_excel('linkker.xlsx')
 
 # Planilha das exposições
 expositor_df = pd.read_csv('exp.csv', sep=';')
 
 # Mix total
-# mix_total_df = pd.read_csv('mix_total.csv', sep=';')
 mix_total_df = pd.read_csv('mix_total.csv', sep=';', encoding='latin1')
 
 
@@ -20,7 +19,7 @@ usuario_abastecimento = pd.read_excel('cadastro_usuario_abastecimento.xlsx')
 # Limpando a planilha Linkker
 
 lojas_validas = [43, 51, 94, 108, 116, 124, 167, 175, 183, 205, 221, 230, 248, 256, 264, 272,
-                 299]  # Obs: Lojas não presentes temos uma regra de corte
+                 299]  # Obs: Lojas não presentes temos uma regra de corte (uma espécie de limiter, que não precisa que a loja seja analisada - regra de negócio)
 posicoes_compativeis = ['PE', 'PG', 'ILHA']  # Limpeza dos móveis diferentes dos três possíveis
 em_linha = mix_total_df['RMS']  # verifica se o produto está em linha na Rede
 
@@ -131,7 +130,7 @@ result_df.drop(columns=[chave_mix], inplace=True)
 
 # Valida e deixa somente os itens que são sistemática 1
 
-sistematica_validas = [1]
+sistematica_validas = [1] 
 
 result_df = result_df[result_df['SISTEMATICA'].isin(sistematica_validas)]
 
